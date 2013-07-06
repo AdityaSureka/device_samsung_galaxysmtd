@@ -1,27 +1,27 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/slim/config/gsm.mk)
+$(call inherit-product, vendor/illusion/config/gsm.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := galaxysmtd
 
-# Inherit some common slim stuff.
-$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+# Inherit some common illusion stuff.
+$(call inherit-product, vendor/illusion/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/galaxysmtd/full_galaxysmtd.mk)
 
 # Inherit device settings
-$(call inherit-product, vendor/slim/config/common_sgs.mk)
+$(call inherit-product, vendor/illusion/config/common_sgs.mk)
 
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/illusion/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.camera.res=5MP
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := galaxysmtd
-PRODUCT_NAME := slim_galaxysmtd
+PRODUCT_NAME := illusion_galaxysmtd
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-I9000
 
